@@ -10,7 +10,7 @@ const getVisibleTodos = (todos, filter) => {
         case VisibilityFilters.SHOW_COMPLETED:
             return todos.filter(t => t.completed);
         case VisibilityFilters.SHOW_ACTIVE:
-            return todos.filter(t => !t.completed);
+            return todos.filter(t => !t.completed && !t.abandon);
         case VisibilityFilters.SHOW_INPROGRESS:
             return todos.filter(t => t.inProgress);
         case VisibilityFilters.SHOW_ABANDON:
